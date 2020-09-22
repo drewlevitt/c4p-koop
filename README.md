@@ -57,4 +57,8 @@ The below steps are adapted from [this guide](https://cloud.google.com/appengine
 ### Deploy to App Engine
 [This guide](https://cloud.google.com/appengine/docs/standard/nodejs/building-app/deploying-web-service) was helpful.
 
-1. From the `c4p-koop` directory, run `gcloud app deploy`.
+1. From the `c4p-koop` directory, run `gcloud app deploy`. This will take a minute or two, but ran successfully on my first attempt.
+2. Visit the live deployed app, either by running `gcloud app browse` in the terminal or by copy-pasting the URL shown during deployment. You'll see "Welcome to Koop!"
+3. Finally, we can append the route we identified earlier to actually receive features from the App Engine deployment of Koop: https://c4p-koop.uk.r.appspot.com/koop-provider-csv/food-data/FeatureServer/0/query?resultRecordCount=-1 
+
+Notably, this just works, while deploying an identical app to Heroku crashed mysteriously when the critical `query` route was requested. Well done, Google!
