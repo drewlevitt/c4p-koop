@@ -1,3 +1,21 @@
 {
-  "port": 8080
+  "port": 8080,
+  "koop-provider-csv": {
+    "sources": {
+      "food-data": {
+        "url": "https://raw.githubusercontent.com/CodeForPittsburgh/food-access-map-data/master/merged_datasets.csv",
+        "geometryColumns": {
+          "longitude": "longitude",
+          "latitude": "latitude"
+        }
+      },
+      "sales": {
+        "url": "http://samplecsvs.s3.amazonaws.com/SalesJan2009.csv",
+        "geometryColumns": {
+          "longitude": "Longitude",
+          "latitude": "Latitude"
+        }
+      }
+    }
+  }
 }
